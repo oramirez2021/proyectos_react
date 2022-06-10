@@ -14,12 +14,14 @@ export default function App() {
       if (response.status === 200) {
         console.log("everything is going good");
         response.json().then((data) => {
+          console.log("DATADATADATA");
           console.log(data);
-          const newLista = data.map(character => {
-            return {character.name;
-              character.picture;
-          });
+          const newLista = data.map((character) => {
+            return {username:character.name,
+              picture:character.img
+          }});
           setLista(newLista);
+          console.log("OMAR");
           console.log(lista);
           
         });
@@ -38,15 +40,14 @@ export default function App() {
     <div className="App">
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
-      <Usuario username={"omar"} />
       <Usuario2 nombreUsuario={"camila"} nomUsu={"renzo"} />
       <Usuario2 nombrecito={"camila"} />
-      <Usuario3 username={"Jonathan"} nombreUsuario={"Kratos"} />
       {listaUsuarios.join("-")};
       {lista.map((usuario) => {
         return (
           <div>
-            <Usuario username={usuario} />
+            {usuario.name}
+            <Usuario3 username={usuario.name} picture={usuario.picture} nombreUsuario={usuario.name}/>
           </div>
         );
       })}
