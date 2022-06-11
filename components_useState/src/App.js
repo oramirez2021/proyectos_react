@@ -5,8 +5,8 @@ import Usuario3 from "./componets/usuario";
 import {useState} from "react";
 */
 
-import Persona from "./componets/persona";
-const source = "https://www.breakingbadapi.com/api/characters";
+import Objeto from "./componets/persona";
+
 
 export default function App() {
   /*
@@ -42,7 +42,7 @@ export default function App() {
 */
   return (
     <div className="App">
-      <Persona perName = {"OMAR"}/>
+      <Objeto perName = {"OMAR"} text="Omar Ramirez Vargas"/>
     </div>
   );
   
